@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar desain</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery.mis.js"></script>
+	<link rel="javascript" type="text/javascript" href="java.js">
+
+</head>
+<body>
+	<div id="header">
+		<h1>Web Desain</h1>
+		<p>Tugas Web Desain</p>
+	 </div>
+		
+	<div id="body">
+		<div id="sidebar">
+			<ul>
+				<li><a href="www.facebook.com">Home</a></li>
+				<li><a href="">Profil</a></li>
+				<li><a href="">About</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+		</div>
+
+		
+		
+		<div id="content">
+			<form>
+			<div class="form">
+				<td>Profil data diri :</td><br/>
+				<input type="text" name="nama" placeholder="Nama">
+				<br></br>
+				<select id="provinsi" name="provinsi">
+					<option value="">Pilih Provinsi</option>
+				<?php
+						mysql_connect("localhost","root","");
+						mysql_select_db("indonesia");
+
+						$sql = mysql_query("select * from tbl_provinsi order by nama_provinsi");
+						while ($p = mysql_fetch_array($sql)) 
+							{
+								echo "<option value=$p[id_provinsi]>$p[nama_provinsi]	</option> \n";
+							}		
+					?>
+				</select>
+				<br></br>
+				<select id="kota" name="kota">
+					<option value="">Pilih Kota</option>
+				</select>
+				<br></br>
+				<textarea name="alamat" placeholder="Alamat"></textarea><br></br>
+				<input type="number" name="no_hp" placeholder="No Tlp" min="10" max="13">
+					
+			</div>
+			
+			
+			
+		</div>
+		<div id="content">
+			<div class="form">
+				<td>Profil data ortu :</td><br/>
+				<input type="text" name="nama" placeholder="Nama">
+				<br></br>
+				
+				<textarea name="alamat" placeholder="Alamat"></textarea><br></br>
+
+				<input type="number" name="no_hp" placeholder="No Tlp" min="10" max="13">
+				
+				<input type="submit" value="Simpan">	
+			</div>
+		</div>
+
+		</form>
+		<input type="submit" value="Simpan">
+	</div>
+
+	<div id="footer">
+		<p>Tugas Web Desain Edwin penangsang 2017</p>
+	</div>
+</body>
+</html>

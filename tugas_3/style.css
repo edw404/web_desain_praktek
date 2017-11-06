@@ -1,0 +1,37 @@
+body{
+	width: 850px;
+	margin: auto;
+	background-color: black;
+}
+
+header{
+	background-color: navy;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+nav{
+	line-height: 30px;
+	width: 100px;
+	background-color: grey;
+	height:520px;
+	padding:5px;
+	float: left;
+
+}
+
+section{
+	width: 350px;
+	float: left;
+	padding: 10px;
+	background-color: #eeeeee;
+}
+
+footer{
+	background-color: navy;
+	color: white;
+	clear: both;
+	padding: 5px;
+	text-align: center;
+}
