@@ -1,0 +1,26 @@
+html{
+	position: relative;
+}
+body{
+	margin-bottom: 100px;
+	margin-top: 30px;
+}
+.jumbotron img{
+	width: 250px;
+	border: 5px solid #666;
+}
+.col-sm-12 hr{
+	width: 250px;
+	border-top:3px solid #666;
+}
+
+section{
+	min-height: 600px;
+}
+.portfolio{
+	background-color: #eee;
+}
+.contact{
+	min-height: 800px;
+}
+
